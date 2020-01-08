@@ -1,0 +1,28 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #BDDFFF
+
+}
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: italic;
+}
+div .header {
+  border: 3px solid #BDACE8;
+  padding: 0px 20px 20px 20px;
+  margin-bottom: 30px;
+  background-color: #CAC9FE;
+}
+.content {
+    max-width: 500px;
+    margin: auto;
+}
+div .link {
+  margin-bottom: 5px;
+}
