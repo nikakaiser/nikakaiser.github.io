@@ -1,0 +1,45 @@
+/*
+font-family: 'Gentium Basic', serif; 400, 700i
+font-family: 'Open Sans', sans-serif; 700
+*/
+
+body{
+  font-family:'Gentium Basic', serif;
+  font-weight: 400;
+  padding: 0px;
+  background-image: url('../images/fogsea.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1{
+  font-family: 'Gentium Basic', serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h2{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0px;
+  text-decoration: underline;
+}
+
+.grid-hw section{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.grid-hw div{
+  border: 1px solid black;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.grid-hw .feature{
+  grid-column: 2/4;
+  grid-row: 1/3;
+  font-weight: 200;
+}
