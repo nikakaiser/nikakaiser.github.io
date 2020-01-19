@@ -1,0 +1,76 @@
+body {
+  background-color: #ccc;
+}
+
+main {
+  width: 80%;
+  margin: 80px auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.svg-body{
+  width: 300px;
+  height: auto;
+  margin: 80px;
+  animation-name: floatbody;
+  animation-duration: 5s;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  position: relative;
+  animation-iteration-count: infinite;
+}
+
+@keyframes floatbody {
+  0% {
+    top: 20px;
+    left: 20px
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+.svg-olivertree path {
+  fill: purple;
+}
+
+
+.button {
+  background-color: rgba(255,127,80 ,1 );
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: white;
+  border: 2px solid rgba(255, 0, 0, 1);
+}
+
+.button:hover {
+  animation-name: button-hover;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate-reverse;
+  position: relative;
+  animation-iteration-count: infinite;
+}
+
+@keyframes button-hover {
+  0%   {
+    background-color: darkorange;
+    top: 0;
+    left: 0;
+  }
+  50%  {
+    background-color: lightsalmon;
+    top: 2px;
+    left: 2px;
+  }
+  100% {
+    background-color: coral;
+    top: 0;
+    left: 0;
+  }
+}
