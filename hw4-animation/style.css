@@ -1,0 +1,53 @@
+body{
+  background-color: lightpink;
+}
+
+h1{
+  background-color: lightpink;
+  font-family: 'Lobster', cursive;
+  margin-left: 50px;
+  color: gold;
+  font-size: 40px;
+
+}
+
+.hexagon{
+  margin-top: 100px;
+  animation: spin 15s infinite;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+
+#text path{
+  animation: gradient 10s infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+
+@keyframes spin {
+  0%{
+   transform: rotate(0deg)
+ }
+ 100% {
+   transform: rotate(360deg)
+ }
+}
+
+@keyframes gradient {
+  0%{
+    fill: yellow;
+  }
+  25%{
+    fill: gold;
+  }
+  50%{
+    fill: orange;
+  }
+  75%{
+    fill: gold;
+  }
+}
