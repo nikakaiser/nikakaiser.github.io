@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery HW</title>
+  <script
+  src="http://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-size: 17px;
+      font-family: arial;
+      background: #f4f4f4;
+      line-height: 1.5em;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px #000 solid;
+      margin-bottom: 10px;
+    }
+    #container {
+      width: 90%;
+      margin: auto;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>jQuery Homework</h1>
+  </header>
+  <div id="container">
+    <h1 id="heading1">Heading One</h1>
+    <p id="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      A, necessitatibus exercitationem dignissimos delectus quibusdam perferendis rerum,
+      veniam <span>quasi quidem modi quaerat, pariatur ab architecto doloribus animi</span>
+      sit ratione eius fugiat, eum ipsa dolore soluta natus. Odit modi esse, laudantium
+      maxime nobis. Cumque, eligendi tempora assumenda numquam repellendus omnis magnam dolorem.
+      </p>
+    <h1 id="heading2">Heading Two</h1>
+    <p id="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      A, necessitatibus exercitationem dignissimos delectus quibusdam perferendis rerum,
+      veniam quasi <span>quidem modi quaerat, pariatur ab architecto doloribus animi</span>
+      sit ratione eius fugiat, eum ipsa dolore soluta natus. Odit modi esse, laudantium
+      maxime nobis. Cumque, eligendi tempora assumenda numquam repellendus omnis magnam dolorem.
+      </p>
+
+    <ul id="list">
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+    </ul>
+
+    <input type="button" value="Button 1">
+    <input type="submit" value="Submit 1">
+    <input type="text">
+
+    <a href="https://google.com">Google</a>
+    <a href="https://yahoo.com">Yahoo</a>
+  </div>
+
+  <script>
+    $('ul#list li:nth-child(3n)').css('list-style', 'none');
+    $(':button').hide();
+    $(':submit').hide();
+
+    $('[href]').css('color','red');
+    $('a[href="https://yahoo.com"]').css('color', 'green');
+
+  </script>
+
+</body>
+</html>
