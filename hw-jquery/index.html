@@ -12,23 +12,28 @@
   <style>
     body {
       font-size: 17px;
-      font-family: arial;
-      background: #f4f4f4;
+      font-family: monospace;
+      background: white;
       line-height: 1.5em;
     }
     header {
-      background: #333;
+      background: pink;
       color: #fff;
       padding: 20px;
       text-align: center;
-      border-bottom: 4px #000 solid;
+      border-bottom: 10px #000 solid;
       margin-bottom: 10px;
+    }
+    h1{
+      font-family: cursive;
     }
     #container {
       width: 90%;
       margin: auto;
       padding: 10px;
+      justify-content: center;
     }
+
   </style>
 </head>
 <body>
@@ -36,47 +41,54 @@
     <h1>jQuery Homework</h1>
   </header>
   <div id="container">
-    <h1 id="heading1">Heading One</h1>
-    <p id="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      A, necessitatibus exercitationem dignissimos delectus quibusdam perferendis rerum,
-      veniam <span>quasi quidem modi quaerat, pariatur ab architecto doloribus animi</span>
-      sit ratione eius fugiat, eum ipsa dolore soluta natus. Odit modi esse, laudantium
-      maxime nobis. Cumque, eligendi tempora assumenda numquam repellendus omnis magnam dolorem.
-      </p>
-    <h1 id="heading2">Heading Two</h1>
-    <p id="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      A, necessitatibus exercitationem dignissimos delectus quibusdam perferendis rerum,
-      veniam quasi <span>quidem modi quaerat, pariatur ab architecto doloribus animi</span>
-      sit ratione eius fugiat, eum ipsa dolore soluta natus. Odit modi esse, laudantium
-      maxime nobis. Cumque, eligendi tempora assumenda numquam repellendus omnis magnam dolorem.
-      </p>
+    <button id="btn1">My Thoughts</button>
+    <button id="btn2">Hello Kitty?</button>
+    <button id="btn5">Goodbye Kitty</button>
+    <button id="btn3">The Button</button>
+    <button id="btn4">A list</button>
 
-    <ul id="list">
-      <li>List Item</li>
-      <li>List Item</li>
-      <li>List Item</li>
-      <li>List Item</li>
-      <li>List Item</li>
-      <li>List Item</li>
-      <li>List Item</li>
+    <p class="para1">I like all the fun stuff you can do with jQuery, like hiding items and toggling animations.<br>
+      I already have some jQuery code on my project one website, but the videos showed me some more simple commands.<br>
+      The thing I was having trouble undertanding was the function(e) stuff. I would like to see some real-life applications where that is useful.
+        </p>
+    <br><img id="hellokitty" img src="https://media.newyorker.com/photos/59095c67ebe912338a37455d/master/pass/Stokes-Hello-Kitty2.jpg"
+        alt="Hello Kitty" style="width:auto;height:500px;">
+    <br> <ul id="list">
+      <li>this</li>
+      <li>is</li>
+      <li>a</li>
+      <li>list</li>
+      <li>with</li>
+      <li>many</li>
+      <li>list</li>
+      <li>items</li>
     </ul>
-
-    <input type="button" value="Button 1">
-    <input type="submit" value="Submit 1">
-    <input type="text">
-
-    <a href="https://google.com">Google</a>
-    <a href="https://yahoo.com">Yahoo</a>
   </div>
 
   <script>
-    $('ul#list li:nth-child(3n)').css('list-style', 'none');
-    $(':button').hide();
-    $(':submit').hide();
+  $(document).ready(function(){
 
-    $('[href]').css('color','red');
-    $('a[href="https://yahoo.com"]').css('color', 'green');
-
+    $('.para1').hide();
+    $('#btn1').click(function(){
+      $('.para1').toggle();
+    });
+    $('#hellokitty').hide();
+    $('#btn2').click(function(){
+      $('#hellokitty').show();
+      $('#btn6').show();
+    });
+    $('#btn5').click(function(){
+      $('#hellokitty').fadeOut();
+    });
+    $('#btn3').click(function(){
+      alert("YOU CLICKED THE BUTTON");
+    });
+    $('ul#list li:odd').css('background-color', 'pink');
+    $('#list').hide();
+    $('#btn4').click(function(){
+      $('#list').toggle();
+    });
+  });
   </script>
 
 </body>
